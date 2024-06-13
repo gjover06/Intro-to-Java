@@ -26,7 +26,7 @@ public class Account {
     public int getId() {
         return id;
     }
-
+    //get balance
     public double getBalance() {
         return balance;
     }
