@@ -6,7 +6,7 @@ public class MyDate {
     int month;
     int day;
 
-    public MyDate(){
+    MyDate(){
         GregorianCalendar calendar = new GregorianCalendar();
         year = calendar.get(GregorianCalendar.YEAR);
         month = calendar.get(GregorianCalendar.MONTH);
@@ -17,6 +17,9 @@ public class MyDate {
         setDate(elapsedTime);
     }
     public MyDate(int year, int month, int day){
+        this.year = year;
+        this.month = month;
+        this.day = day;
 
     }
     //return year
@@ -24,9 +27,11 @@ public class MyDate {
         return year;
     }
 
+
     //return month
-    public int getMonth(){
-        return month;
+    public String getMonth(){
+        String m = String.valueOf(month + 1);
+        return (month < 10 ? "0" + m : m);
     }
 
     public String getDay() {
